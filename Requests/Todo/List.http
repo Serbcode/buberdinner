@@ -1,0 +1,4 @@
+@host = https://localhost:7120
+
+GET {{host}}/todo
+Content-Type: application/json
