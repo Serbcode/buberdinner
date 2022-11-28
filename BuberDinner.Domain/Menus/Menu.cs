@@ -1,10 +1,10 @@
 using BuberDinner.Domain.Common.Models;
 using BuberDinner.Domain.Common.ValueObjects;
-using BuberDinner.Domain.Dinner.ValueObjects;
-using BuberDinner.Domain.Host.ValueObjects;
+using BuberDinner.Domain.Dinners.ValueObjects;
+using BuberDinner.Domain.Hosts.ValueObjects;
 using BuberDinner.Domain.Menus.Entities;
 using BuberDinner.Domain.Menus.ValueObjects;
-using BuberDinner.Domain.MenuReview.ValueObjects;
+using BuberDinner.Domain.MenuReviews.ValueObjects;
 
 namespace BuberDinner.Domain.Menus;
 
