@@ -16,27 +16,24 @@ public class CreateMenuCommandHandler : IRequestHandler<CreateMenuCommand, Error
         _menuRepository = menuRepository;
     }
 
-    public async Task<ErrorOr<Menu>> Handle(CreateMenuCommand request,
-        CancellationToken cancellationToken)
+    public async Task<ErrorOr<Menu>> Handle(CreateMenuCommand cmd, CancellationToken cancellationToken)
     {
-        await Task.CompletedTask;
-
-        // create menu
         var menu = Menu.Create(
-            request.Name,
-            request.Description,
-            HostId.Create(request.HostId),    
-            request.Sections
+            name: cmd.Name,
+            description: cmd.Description,
+            hostId: HostId.Create(cmd.HostId),    
+            
+            cmd.Sections
                 .Select(section => MenuSection.Create(
                     section.Name,
                     section.Description,
                     section.Items.ConvertAll(item => MenuItem.Create(item.Name, item.Description))
                 )).ToList());
         
-        // persist menu
         _menuRepository.Add(menu);
-
-        // return menu;
+        
+        await Task.CompletedTask;
+        
         return menu;
     }
 }
