@@ -8,6 +8,14 @@ public sealed class HostId : ValueObject
     
     private HostId(Guid value) => Value = value;
 
+    public static HostId Create(string strGuid)
+    {
+        if (Guid.TryParse(strGuid, out var guid))
+            return new(guid);
+        else 
+            throw new ArgumentException("HostId: Could not convert string to Guid");
+    }
+
     public static HostId CreateUnique()
     {
         return new(Guid.NewGuid());

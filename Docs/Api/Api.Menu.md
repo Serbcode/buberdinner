@@ -10,7 +10,7 @@ POST /hosts/{hostId}/menus
 {
     "name" : "Yummy menu",
     "description" : "A menu with yummy food",
-    "section" : [
+    "sections" : [
         {
             "name" : "Appetizers",
             "description" : "Starters",
