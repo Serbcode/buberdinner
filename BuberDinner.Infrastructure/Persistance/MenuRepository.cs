@@ -11,4 +11,9 @@ public class MenuRepository : IMenuRepository
     {
         _menus.Add(menu);     
     }
+
+    public IEnumerable<Menu> GetList(string hostId)
+    {
+        return _menus.Where(menu => menu.HostId.Value == hostId);
+    }
 }

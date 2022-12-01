@@ -1,0 +1,9 @@
+@host = https://localhost:7120
+@hostId = 123456789
+@token = eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJkNjhmNjJiOC1mZTcwLTRiZGQtYWM0ZC01MTkzNDc0ZTNhN2YiLCJnaXZlbl9uYW1lIjoiQm9iIiwiZmFtaWx5X25hbWUiOiJNYXJ0aW4iLCJqdGkiOiI1NjgzZjZkYi02NzQ4LTRkMGQtYTNlMi05MTQ4MDQ5MDZlMTkiLCJleHAiOjE2Njk5MjAwMzksImlzcyI6IkJ1YmVyRGlubmVyIiwiYXVkIjoiQnViZXJEaW5uZXIifQ.LVOLClSqGIvIDFVd5jjtTEpUHdUWNcOsRFLAcjyPyhM
+
+
+GET {{host}}/hosts/{{hostId}}/menus
+
+Content-Type: application/json
+Authorization: Bearer {{token}}} 

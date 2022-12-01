@@ -1,22 +1,22 @@
 @host = https://localhost:7120
-@hostId = 19483
-@token = eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI1ZTcyMTNiYi1iOTU5LTRiNDAtYjAxOS0wZWRmYTcyNmM5ZTgiLCJnaXZlbl9uYW1lIjoiQm9iIiwiZmFtaWx5X25hbWUiOiJNYXJ0aW4iLCJqdGkiOiI0NmE3YjA2My05YmE0LTQ4YjQtOTg2My04OTZhMTM5M2FlZDQiLCJleHAiOjE2Njk3NTE0MzgsImlzcyI6IkJ1YmVyRGlubmVyIiwiYXVkIjoiQnViZXJEaW5uZXIifQ.BHxx690T7pX_P8enyi7tFFTFf0GqJqiqdH4hclVsFvs
+@hostId = 123456789
+@token = eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIzZGE5NDg0Zi05OTAyLTQ0MjItOWYyNi04MTJmZDMwYTJjOGIiLCJnaXZlbl9uYW1lIjoiQm9iIiwiZmFtaWx5X25hbWUiOiJNYXJ0aW4iLCJqdGkiOiIwMWQ5YjQ0ZC0yZDA4LTRhYTUtYmUzYS0yYjFiM2E3ODMyNDUiLCJleHAiOjE2Njk5MTk0ODgsImlzcyI6IkJ1YmVyRGlubmVyIiwiYXVkIjoiQnViZXJEaW5uZXIifQ.MB1wqDjSKZDO-veJmIGku0bMTTOJUH4Ez8rf7a1ugXo
 
 POST {{host}}/hosts/{{hostId}}/menus
 Content-Type: application/json
 Authorization: Bearer {{token}}
 
 {
-    "name" : "Pupper",
-    "description" : "Pupper menu",
+    "name" : "Menu dayly",
+    "description" : "Dayli menu",
     "sections" : [
         {
-            "name" : "any good section name",
-            "description" : "Beginners",
+            "name" : "section 1",
+            "description" : "Some description",
             "items": [
                 {
                     "name" : "Nuggets",
-                    "description" : "Deep Nuggets"
+                    "description" : "deep nuggets"
                 }
             ]
         }

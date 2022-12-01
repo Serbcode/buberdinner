@@ -26,7 +26,8 @@ public class MenuMappingConfig : IRegister
 
 
         config.NewConfig<MenuSection, MenuSectionResponse>()
-            .Map(dest => dest.Id, src => src.Id.Value);
+            .Map(dest => dest.Id, src => src.Id.Value)
+            .Map(dest => dest.Items, src => src.MenuItems);
 
         config.NewConfig<MenuItem, MenuItemResponse>()
             .Map(dest => dest.Id, src => src.Id.Value);

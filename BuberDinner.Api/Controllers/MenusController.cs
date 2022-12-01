@@ -1,4 +1,5 @@
 using BuberDinner.Application.Menus.Commands;
+using BuberDinner.Application.Menus.Queries;
 using BuberDinner.Contracts.Menu;
 using BuberDinner.Domain.Menus;
 using ErrorOr;
@@ -18,6 +19,15 @@ public class MenusController : ApiController
     {
         _mapper = mapper;
         _mediator = mediator;
+    }
+
+    [HttpGet]
+    public async Task<List<MenuResponse>> GetList(string hostId)
+    {
+        var query = _mapper.Map<GetMenusQuery>(hostId);
+        ErrorOr<List<Menu>> menus = await _mediator.Send(query);
+        var response = _mapper.Map<List<MenuResponse>>(menus);
+        return response;
     }
 
     [HttpPost]
